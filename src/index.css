@@ -1,1 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+/* hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.border-style {
+  position: relative;
+  width: fit-content;
+}
+
+.border-style::after {
+  content: "";
+  width: 50%;
+  height: 6px;
+  position: absolute;
+  left: 10px;
+  bottom:10px;
+  padding-left: 4px;
+  background: linear-gradient(to right, #FFA500, #FFD700, #32CD32);
+  z-index: 1;
+  border-radius: 0.1375rem; 
+}
+
+.button-style{
+  background-color:#021C57;
+  color: white;
+  cursor: pointer;
+  transition: all;
+}
+.button-style:hover{
+  background-color: #021b57ce;
+}

@@ -1,97 +1,185 @@
-import React, { useState } from 'react';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from "lucide-react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/LOGO.png";
+import FloatingButtons from "./FloatingButtons";
+import { FaPhoneAlt } from "react-icons/fa";
+import "../index.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [query, setQuery] = useState("");
 
   const navLinks = [
-    { name: 'Products', href: '#products' },
-    { name: 'About', href: '#about' },
-    { name: 'Certifications', href: '#certs' },
-    { name: 'Contact', href: '#contact' },
+    { name: "Home", to: "/" },
+    { name: "About", to: "/about" },
+    { name: "Laboratry Equipments", to: "/products" },
+    { name: "Scientific Equipments", to: "/scientific-equipment" },
+    { name: "Contact", to: "/contact" },
   ];
-
-  const [query, setQuery] = useState("");
 
   const handleSearch = (e) => {
     e.preventDefault();
     console.log("Search for:", query);
-    // You can redirect, filter, or fetch data here
   };
+
   return (
-    <nav className="h-16">
-      <div className="px-4 py-2 bg-white shadow-md fixed w-full top-0 left-0 z-50 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-blue-700">ARCL</div>
-
-        {/* Search bar (visible always) */}
-       <form onSubmit={handleSearch} className="relative max-w-xs w-full mx-4 overflow-hidden">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search products..."
-        className="w-full pl-4 pr-10 py-2.5 border border-gray-300  focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm"
-      />
-      <button type="submit" className="absolute right-0 bottom-0 top-0  px-3  bg-zinc-200  hover:bg-zinc-300">
-        Search
-      </button>
-    </form>
-        {/* Hamburger menu (visible only on mobile) */}
-        <div className="md:hidden">
-          <button onClick={() => setIsMenuOpen(true)}>
-            <Menu size={24} />
-          </button>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-700 hover:text-blue-700 font-medium"
+    <>
+      <header className="h-30 w-full">
+        <div className="fixed top-0 left-0 right-0 z-50 h-30 bg-white">
+          <div className="upper-layer h-1/2 flex justify-between items-center bg-zinc-100 shadow-2xs px-5">
+            <form
+              onSubmit={handleSearch}
+              className="relative max-w-xs w-full rounded-md overflow-hidden bg-white"
             >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="#quote"
-            className="bg-zinc-100 hover:bg-zinc-200 font-semibold border-b-4 px-4 py-2 flex items-center justify-center gap-2.5 transition"
-          >
-            Request Quote <ArrowRight className="w-5 h-5" />
-          </a>
-        </div>
-      </div>
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search products..."
+                className="w-full pl-4 pr-10 py-2 border rounded-md border-gray-300 focus:outline focus:ring-2 focus:ring-[#021C57] text-sm"
+              />
+              <button
+                type="submit"
+                className=" button-style absolute right-0 top-0 bottom-0 px-3"
+              >
+                Search
+              </button>
+            </form>
+            <div className="flex justify-center items-center gap-5">
+              <a
+                className="text-[#021C57] md:block font-semibold hover:underline transition"
+                href="tel:+919369962486"
+              >
+                <span className="hidden md:block"> Call +91 9369962486 </span>
+                <FaPhoneAlt className="md:hidden w-10 h-10 rounded-full hover:bg-[#021C57] transition border-2 p-1.5" />
+              </a>
 
-      {/* Sidebar Menu (Mobile) */}
-      {isMenuOpen && (
-        <div className="fixed top-0 left-0 h-full w-1/2 bg-white shadow-lg z-50 p-4 flex flex-col items-start space-y-4">
-          <div className="flex justify-end">
-            <button onClick={() => setIsMenuOpen(false)}>
-              <X size={24} />
-            </button>
+              <button className="button-style hidden rounded-md font-semibold px-4 py-2 md:flex items-center gap-2 transition">
+                Request Quote <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-gray-800 hover:text-blue-700 text-lg font-medium"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a
-            href="#quote"
-            className="bg-zinc-200 flex px-4 py-2 rounded-md hover:bg-zinc-300 transition text-center"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Request Quote <ArrowRight className="w-5 h-5" />
-          </a>
+
+          <nav className="flex justify-between items-center h-1/2 px-5 py-3.5 shadow-md shadow-black/50">
+            <div className="flex justify-between items-center w-full">
+              {/* Logo */}
+              <div className="logo-section">
+                <Link to="/" className="flex items-center justify-center gap-2">
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className="w-20 mix-blend-darken"
+                  />
+
+                  <div className="flex flex-col text-[#021C57]">
+                    <p className=" font-semibold font-saira">
+                      ARCL INSTRUMENTS PVT. LTD
+                    </p>
+                    <p className="text-[8px] md:text-[10px] text-center">
+                      ( An ISO 9001:2015 Certified Company )
+                    </p>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Desktop Menu */}
+              <div className="hidden lg:flex items-center gap-6">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.name}
+                    to={link.to}
+                    className={({ isActive }) =>
+                      `font-medium px-2 py-1 transition-all ${
+                        isActive
+                          ? "text-[#021C57] border-b-2 border-[#021C57]"
+                          : "text-gray-700"
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                ))}
+              </div>
+
+              {/* Mobile Hamburger */}
+              <div className="lg:hidden">
+                <button onClick={() => setIsMenuOpen(true)}>
+                  <Menu size={24} />
+                </button>
+              </div>
+            </div>
+
+            {isMenuOpen && (
+              <div
+                className="
+                        fixed top-0 left-0 h-screen w-1/2 sm:w-1/2 bg-white shadow-lg z-50 p-4 flex flex-col gap-4"
+              >
+                {/* Close Button */}
+                <div className="self-end">
+                  <button onClick={() => setIsMenuOpen(false)}>
+                    <X size={24} />
+                  </button>
+                </div>
+
+                {/* Mobile Nav Links */}
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.to}
+                    className="text-gray-800 hover:text-blue-700 text-sm font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+
+                <button className="button-style font-semibold px-4 py-2 flex items-center gap-2 transition rounded-md">
+                  Request Quote <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
+            )}
+          </nav>
         </div>
-      )}
-    </nav>
+      </header>
+
+      <FloatingButtons />
+
+      {/*
+      <div className="fixed bottom-24 right-6 flex flex-col gap-4 z-50">
+        <a
+          href="https://wa.me/919369962486?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20products"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 p-3 rounded-full shadow-lg  hover:scale-105 transition"
+        >
+          <FaWhatsapp className="text-white w-5 h-5" />
+        </a>
+
+        <a
+          href="mailto:arclinstruments@gmail.com"
+          className="bg-blue-600 p-3 rounded-full shadow-lg hover:scale-105 transition"
+        >
+          <Mail className="text-white w-5 h-5" />
+        </a>
+  
+      </div>
+  
+      <div className="flex justify-center items-center fixed bottom-12 right-6 z-50">
+        <a
+          href=""
+          download
+          className="group max-w-sm w-full p-2 hover:scale-105 transition bg-[#FF9800] rounded-md shadow-lg hover:shadow-2xl cursor-pointer text-center"
+        >
+          <div className="flex gap-2 items-center text-white">
+            <FaFileDownload className="" />
+            <p className="font-semibold ">
+              Download E-Catalogue 
+            </p>
+          </div>
+        </a>
+      </div> */}
+    </>
   );
 };
 

@@ -1,12 +1,17 @@
 import './App.css'
+import { Outlet } from 'react-router-dom'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Home from './pages/Home'
+import MaintenancePopup from './components/MaintenancePopup';
 
 function App() {
 
   return (
     <>
-     <Home />
+      <Navbar />
+        <Outlet />
+        <MaintenancePopup />
+      <Footer />
     </>
   )
 }
