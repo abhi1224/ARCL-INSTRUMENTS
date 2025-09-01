@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
+import QuoteFormPopup from "./QuoteFormPopUp";
 
 const ImageSection = ({ title, images }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,16 @@ const ImageSection = ({ title, images }) => {
     });
     setIsOpen(true);
   };
+const [quoteForm, setQuoteForm] = useState(false);
 
+  const openQuoteForm = (img) => {
+    setSelectedImage({
+      src: img,
+      title: getImageName(img),
+      desc: "No description available.",
+    });
+    setQuoteForm(true)
+  }
   const getImageName = (path) => {
     const parts = path.split("/");
     const fileName = parts[parts.length - 1];
@@ -55,7 +65,7 @@ const ImageSection = ({ title, images }) => {
 
               <div className="border-t-2 w-full flex justify-around mt-auto mb-4">
                 <button
-                  onClick={() => openModal(img, index)}
+                  onClick={() => openQuoteForm(img, index)}
                   className="button-style text-xs my-2 font-semibold px-5 py-2 rounded transition"
                 >
                   Get Quote
@@ -102,6 +112,13 @@ const ImageSection = ({ title, images }) => {
           </div>
         </div>
       )}
+      {quoteForm && selectedImage && (
+                <QuoteFormPopup
+                  setQuoteForm={setQuoteForm}
+                  title={selectedImage.title}
+                />
+              )}
+                  
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import QuoteFormPopup from "../components/QuoteFormPopUp";
 
 const images = import.meta.glob(
   "/src/assets/Scientific-Instruments/*.{jpg,jpeg,png,gif,webp}",
@@ -30,6 +31,16 @@ function ScientificEquipment() {
     });
     setIsOpen(true);
   };
+  const [quoteForm, setQuoteForm] = useState(false);
+
+  const openQuoteForm = (img) => {
+    setSelectedImage({
+      src: img,
+      title: getImageName(img),
+      desc: "No description available.",
+    });
+    setQuoteForm(true)
+  }
    const closeModal = () => {
     setIsOpen(false);
     setSelectedImage(null);
@@ -87,7 +98,7 @@ function ScientificEquipment() {
                     {/* Bottom Overlay */}
                   <div className="border-t-2 w-full flex justify-around">
                     <button
-                      onClick={() => openModal(img, index)}
+                      onClick={() => openQuoteForm(img, index)}
                       className="button-style text-white cursor-pointer text-xs my-2 font-semibold px-5 py-2 rounded transition"
                     >
                       Get Quote
@@ -135,6 +146,13 @@ function ScientificEquipment() {
             </div>
           </div>
         )}
+        {quoteForm && selectedImage && (
+          <QuoteFormPopup
+            setQuoteForm={setQuoteForm}
+            title={selectedImage.title}
+          />
+        )}
+            
       </div>
     </section>
     </>

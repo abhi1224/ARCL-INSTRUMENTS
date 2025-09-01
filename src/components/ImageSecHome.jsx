@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import "../index.css";
+import QuoteFormPopup from "./QuoteFormPopUp";
 
 function ImageSecHome({ title, images }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,18 @@ function ImageSecHome({ title, images }) {
     });
     setIsOpen(true);
   };
+
+  const [quoteForm, setQuoteForm] = useState(false);
+
+  const openQuoteForm = (img) => {
+    setSelectedImage({
+      src: img,
+      title: getImageName(img),
+      desc: "No description available.",
+    });
+    setQuoteForm(true)
+  }
+
   const getImageName = (path) => {
     const parts = path.split("/");
     const fileName = parts[parts.length - 1];
@@ -36,6 +49,8 @@ function ImageSecHome({ title, images }) {
   const scrollRight = () => {
     scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
   };
+
+  
   return (
     <>
       <section className="px-2 md:w-[90%] md:mx-auto w-full mb-[5rem]">
@@ -73,7 +88,7 @@ function ImageSecHome({ title, images }) {
                     {/* Bottom Overlay */}
                   <div className="border-t-2 w-full flex justify-around">
                     <button
-                      onClick={() => openModal(img, index)}
+                      onClick={() => openQuoteForm(img, index)}
                       className="button-style text-white cursor-pointer text-xs my-2 font-semibold px-5 py-2 rounded transition"
                     >
                       Get Quote
@@ -81,7 +96,7 @@ function ImageSecHome({ title, images }) {
                     <button
                       onClick={() => openModal(img, index)}
                       className="button-style text-xs my-2 font-semibold px-5 py-2 rounded transition"
-                    >
+                     >
                       Catalog
                     </button>
                   </div>
@@ -108,6 +123,8 @@ function ImageSecHome({ title, images }) {
         </div>
 
         {isOpen && selectedImage && (
+
+            
           <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
             <div className="bg-white w-full max-w-4xl rounded-lg overflow-hidden shadow-xl relative flex flex-col md:flex-row">
               {/* Close Button */}
@@ -135,8 +152,16 @@ function ImageSecHome({ title, images }) {
                 <p className="text-gray-700">{selectedImage.desc}</p>
               </div>
             </div>
-          </div>
+          </div>          
         )}
+
+        {quoteForm && selectedImage && (
+          <QuoteFormPopup
+            setQuoteForm={setQuoteForm}
+            title={selectedImage.title}
+          />
+        )}
+                
       </section>
     </>
   );

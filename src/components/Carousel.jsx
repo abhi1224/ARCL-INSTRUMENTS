@@ -25,7 +25,7 @@ const images = [
   
   {
     image: image4,
-    heading: "Portable Cabins",
+    heading: "Portable Cabins Office Cabins, Security Cabins, Multi Storey Cabins",
     text: "ARCL offers premium-quality portable cabins tailored for site offices, laboratories, and custom utility needs, engineered for durability, safety, and flexibility across multiple industries."
   }
 ];
