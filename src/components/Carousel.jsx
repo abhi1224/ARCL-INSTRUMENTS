@@ -55,7 +55,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full lg:h-[calc(100vh-12rem)] h-[50vh] md:h-[60vh] overflow-hidden">
+    <div className="relative w-full xl:h-[calc(100vh-12rem)] h-[50vh] md:h-[60vh] overflow-hidden">
       {/* Slides */}
       {images.map((item, index) => (
         <div
@@ -72,9 +72,9 @@ const Carousel = () => {
           {/* Transparent Layer */}
           <div className="absolute w-full h-full bg-black/70 z-20"></div>
 
-          <div className="absolute left-6 md:left-24 top-20 h-full w-[90%] md:w-1/2 z-50 text-white font-semibold">
+          <div className="absolute left-6 md:left-24 flex flex-col justify-center h-full w-[90%] m-auto xl:w-1/2 z-50 text-white font-semibold">
             <p className='md:text-3xl text-2xl'>We offers</p>
-            <p className = 'md:text-5xl text-3xl font-bold'>{item.heading}</p>
+            <p className = "lg:text-7xl md:text-5xl text-3xl font-bold stroke-text">{item.heading}</p>
             <p className="my-5 font-normal md:text-2xl">{item.text}</p>
           </div>
         </div>

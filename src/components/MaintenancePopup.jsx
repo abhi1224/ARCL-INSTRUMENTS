@@ -43,8 +43,8 @@ function MaintenancePopup() {
             <p className="text-gray-600 text-sm mb-2">
                 <a 
                   className="hover:underline transition text-left"
-                  href="tel:+919369962486">
-                  Call +91 9369962486</a><br />
+                  href="tel:+918169695728">
+                  Call +91 8169695728</a><br />
                   <span className="text-sm">Monday to Saturday 10 AM to 6 PM</span>
             </p>
             <p className="text-gray-600 text-sm">

@@ -5,6 +5,7 @@ import logo from "../assets/LOGO.png";
 import FloatingButtons from "./FloatingButtons";
 import { FaPhoneAlt } from "react-icons/fa";
 import "../index.css";
+import QuoteFormPopup from "./QuoteFormPopUp";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +23,8 @@ const Navbar = () => {
     e.preventDefault();
     console.log("Search for:", query);
   };
+  const [quoteForm, setQuoteForm] = useState(false);
+
 
   return (
     <>
@@ -55,11 +58,17 @@ const Navbar = () => {
                 <FaPhoneAlt className="md:hidden w-10 h-10 rounded-full hover:bg-[#021C57] transition border-2 p-1.5" />
               </a>
 
-              <button className="button-style hidden rounded-md font-semibold px-4 py-2 md:flex items-center gap-2 transition">
+              <button 
+                onClick={() => setQuoteForm(true)}
+                className="button-style hidden rounded-md font-semibold px-4 py-2 md:flex items-center gap-2 transition">
                 Request Quote <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
+
+          {quoteForm && 
+            <QuoteFormPopup setQuoteForm={setQuoteForm}/>
+          }
 
           <nav className="flex justify-between items-center h-1/2 px-5 py-3.5 shadow-md shadow-black/50">
             <div className="flex justify-between items-center w-full">
@@ -140,6 +149,7 @@ const Navbar = () => {
               </div>
             )}
           </nav>
+
         </div>
       </header>
 

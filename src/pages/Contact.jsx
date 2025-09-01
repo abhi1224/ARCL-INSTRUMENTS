@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
 
   return (
     <>
-        <section className="bg-gray-50 py-12 px-4 md:px-12 lg:px-24">
+      <section className="bg-gray-50 py-12 px-4 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* Contact Info */}
         <div className="space-y-6">
