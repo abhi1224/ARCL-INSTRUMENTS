@@ -2,8 +2,27 @@ import React from 'react'
 import { IoHome } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import emailjs from "emailjs-com"; 
 
 function Contact() {
+
+  
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_bpqh7ub",
+    "template_5u2zrbp",
+    e.target,
+    "Hr3GqO26H_N1EUV_p"
+  )
+  .then((result) => {
+    alert("Message sent successfully!");
+  }, (error) => {
+    alert("Error sending message: " + error.text);
+  });
+};
+
   return (
     <>
         <section className="bg-gray-50 py-12 px-4 md:px-12 lg:px-24">
@@ -23,8 +42,8 @@ function Contact() {
               <p>   
                 <a 
                   className="hover:underline transition"
-                  href="tel:+919369962486">
-                  Call +91 9369962486</a><br />
+                  href="tel:+918169695728">
+                  Call +91 8169695728</a><br />
                   <span className="text-sm">Monday to Saturday 10 AM to 6 PM</span>
               </p>
             </div>
@@ -45,23 +64,27 @@ function Contact() {
         {/* Contact Form */}
         <div className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-6">Get In Touch</h2>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
+              name='from_name'
               placeholder="Enter your name"
               className="w-full border border-gray-300 outline-none rounded p-2"
             />
             <input
               type="email"
+              name='from_email'
               placeholder="Enter email address"
               className="w-full border border-gray-300 outline-none rounded p-2"
             />
             <input
               type="text"
+              name='subject'
               placeholder="Enter your subject"
               className="w-full border border-gray-300 outline-none rounded p-2"
             />
             <textarea
+              name='message'
               placeholder="Message"
               rows="4"
               className="w-full border border-gray-300 outline-none rounded p-2"

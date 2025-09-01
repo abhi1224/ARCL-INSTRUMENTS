@@ -49,9 +49,9 @@ const Navbar = () => {
             <div className="flex justify-center items-center gap-5">
               <a
                 className="text-[#021C57] md:block font-semibold hover:underline transition"
-                href="tel:+919369962486"
+                href="tel:+918169695728"
               >
-                <span className="hidden md:block"> Call +91 9369962486 </span>
+                <span className="hidden md:block"> Call +91 8169695728 </span>
                 <FaPhoneAlt className="md:hidden w-10 h-10 rounded-full hover:bg-[#021C57] transition border-2 p-1.5" />
               </a>
 
