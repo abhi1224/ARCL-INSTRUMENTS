@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuoteFormPopup from "../components/QuoteFormPopUp";
+import QuoteFormPopup from "../components/QuoteFormPopup";
 
 const images = import.meta.glob(
   "/src/assets/Scientific-Instruments/*.{jpg,jpeg,png,gif,webp}",
