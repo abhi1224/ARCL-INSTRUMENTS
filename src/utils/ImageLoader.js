@@ -6,7 +6,8 @@ export function getImagesByFolders() {
 
   for (const path in imageModules) {
     const parts = path.split('/');
-    const folderName = parts[parts.length - 2]; // e.g., 'nature'
+    let folderName = parts[parts.length - 2]; // e.g., 'nature'
+    folderName = folderName.replace(/^\d+\./, '');
 
     if (!folderMap[folderName]) folderMap[folderName] = [];
 

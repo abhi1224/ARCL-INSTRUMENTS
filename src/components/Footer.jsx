@@ -6,7 +6,7 @@ import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import { FiYoutube } from "react-icons/fi";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const navLinks = [
@@ -107,12 +107,14 @@ const Footer = () => {
 
           <div className="flex justify-start items-center mt-10 gap-3">
             <a 
-              href="https://www.linkedin.com/in/arcl-instruments/"  
+              className='hover:scale-110 transition-all'
+              href="https://www.linkedin.com/company/arclinstruments/about/"  
               target="_blank"
               >
               <TbBrandLinkedin size={30}/>
             </a>
             <a 
+              className='hover:scale-110 transition-all'
               href="https://www.instagram.com/arcl_lab/"  
               target="_blank"
               >
@@ -120,22 +122,25 @@ const Footer = () => {
             </a>
 
             <a 
+              className='hover:scale-110 transition-all'
               href="https://www.facebook.com/people/ARCL-Instruments-Pvt-Ltd/61580266556551/?mibextid=wwXIfr&rdid=0pEWUbaSbugZ4VGO&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Jc3oq2HDm%2F%3Fmibextid%3DwwXIfr"  
               target="_blank"
               >
               <RiFacebookBoxLine size={30}/>
             </a>
             <a 
+              className='hover:scale-110 transition-all'
               href="https://www.youtube.com/@ARCLLabSolutions"  
               target="_blank"
               >
               <FiYoutube size={30} />
             </a>
             <a 
+              className='hover:scale-110 transition-all'
               href="https://x.com/ArclPrivate"  
               target="_blank"
               >
-              <FaSquareXTwitter size={30}/>
+              <FaXTwitter  size={30}/>
             </a>
             
             
@@ -152,26 +157,25 @@ const Footer = () => {
         </p>
         <div className="text-center font-semibold">
           <a
-            className="hover:underline"
+            className="hover:underline mr-2"
             href="https://www.linkedin.com/in/harsh-mishra-4829a82aa/"
             target="_blank"
           >
             Harsh Mishra,
           </a>
           <a
-            className="hover:underline"
-            href="#"
+            className="hover:underline mr-2"
+            href="https://www.linkedin.com/in/raghvendrrsingh/"
             target="_blank"
           >
-             Raghvendra Singh,
+            Raghvendra Singh,
           </a>
           <a
             className="hover:underline"
             href="https://www.linkedin.com/in/abhi1224/"
             target="_blank"
-          >
-    
-             Abhishek Verma
+          >    
+            Abhishek Verma
           </a>
           
         </div>
