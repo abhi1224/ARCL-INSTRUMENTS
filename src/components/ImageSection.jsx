@@ -112,6 +112,7 @@ const [quoteForm, setQuoteForm] = useState(false);
           </div>
         </div>
       )}
+      
       {quoteForm && selectedImage && (
                 <QuoteFormPopup
                   setQuoteForm={setQuoteForm}

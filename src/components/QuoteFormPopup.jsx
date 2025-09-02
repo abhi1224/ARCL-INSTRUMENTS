@@ -31,7 +31,7 @@ export default function QuoteFormPopup({ setQuoteForm, title = '' }) {
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-6 relative">
           {/* Close button */}
           <button
-            className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 cursor-pointer"
             onClick={() => setQuoteForm(false)}
           >
             <IoClose size={24} />
@@ -85,7 +85,7 @@ export default function QuoteFormPopup({ setQuoteForm, title = '' }) {
                 name="product_name"
                 type="text"
                 value={title}
-                className="w-full border rounded-md px-3 py-2 focus:outline-none "
+                className={`${title !== '' ? 'bg-gray-200 cursor-not-allowed' : ''} w-full border rounded-md px-3 py-2 focus:outline-none`}
                 placeholder="Enter product name"
                 required
                 readOnly = {title != ""}

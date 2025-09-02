@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/LOGO.png";
-
+import { CiLinkedin } from "react-icons/ci";
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { TbBrandLinkedin } from "react-icons/tb";
+import { RiFacebookBoxLine } from "react-icons/ri";
+import { FiYoutube } from "react-icons/fi";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const navLinks = [
@@ -24,7 +29,7 @@ const Footer = () => {
                     <p className=" font-semibold font-saira">
                      ARCL INSTRUMENTS PVT. LTD
                     </p>
-                    <p className="text-[8px] md:text-[10px] text-center">( An ISO 9001:2015 Certified Company )</p>
+                    <p className="text-[8px] md:text-[10px] text-center">( An ISO 9001:2025 Certified Company )</p>
                   </div>
                 </Link>
               </div>   
@@ -61,7 +66,9 @@ const Footer = () => {
         {/* 3. Address */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Address</h3>
-          <p className="text-gray-300 text-sm">
+          <a href="https://maps.app.goo.gl/dJHoT3W4RwZn6pFC7" className="text-gray-300 text-sm hover:text-blue-600 hover:underline">
+            
+            Arcl Instruments Private Limited <br />
             
             Keshrinath Gopal Patil CH,
             <br />
@@ -69,7 +76,7 @@ const Footer = () => {
             <br />
             Kandivali (West), <br />
             Mumbai - 400067, Maharashtra ,INDIA
-          </p>
+          </a>
         </div>
 
         {/* 4. Contact */}
@@ -97,6 +104,43 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+
+          <div className="flex justify-start items-center mt-10 gap-3">
+            <a 
+              href="https://www.linkedin.com/in/arcl-instruments/"  
+              target="_blank"
+              >
+              <TbBrandLinkedin size={30}/>
+            </a>
+            <a 
+              href="https://www.instagram.com/arcl_lab/"  
+              target="_blank"
+              >
+              <FaInstagram size={30}/>
+            </a>
+
+            <a 
+              href="https://www.facebook.com/people/ARCL-Instruments-Pvt-Ltd/61580266556551/?mibextid=wwXIfr&rdid=0pEWUbaSbugZ4VGO&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Jc3oq2HDm%2F%3Fmibextid%3DwwXIfr"  
+              target="_blank"
+              >
+              <RiFacebookBoxLine size={30}/>
+            </a>
+            <a 
+              href="https://www.youtube.com/@ARCLLabSolutions"  
+              target="_blank"
+              >
+              <FiYoutube size={30} />
+            </a>
+            <a 
+              href="https://x.com/ArclPrivate"  
+              target="_blank"
+              >
+              <FaSquareXTwitter size={30}/>
+            </a>
+            
+            
+
+          </div>
         </div>
       </div>
 

@@ -61,12 +61,12 @@ function FloatingButtons() {
             </a>
           </div>
 
-          <div className="flex justify-center items-center fixed bottom-12 right-6 z-50">
+          <div className="flex justify-center items-center fixed bottom-12 right-6 z-50  floating-button rounded-4xl overflow-hidden px-5">
             <a
               href={ArclBrochure} 
               download
               onClick={handleDownload}
-              className="group max-w-sm w-full p-2 hover:scale-105 transition bg-[#FF9800] rounded-md shadow-lg hover:shadow-2xl cursor-pointer text-center"
+              className="group max-w-sm w-full p-2  transition hover:scale-105 cursor-pointer text-center"
             >
               <div className="flex gap-2 items-center text-white">
                 <FaFileDownload />

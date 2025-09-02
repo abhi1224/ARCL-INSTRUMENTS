@@ -27,7 +27,7 @@ function About() {
         <p className="text-lg text-gray-700 md:w-[80%] text-justify">
             Arcl manufacture and sale a wide range of laboratory instruments, including concrete, cement, aggregate, soil, bitumen, surveying and scientific equipment fields.
         <br />
-        We use flexible management to quickly adapt to market needs, focusing on science to develop new laboratory instruments and stay connected with customers and experts. We are an <strong>ISO 9001:2015 Certified company</strong> and all our products comply with stringent International Standards such as ISO/IEC 17025:2017 Certifications.
+        We use flexible management to quickly adapt to market needs, focusing on science to develop new laboratory instruments and stay connected with customers and experts. We are an <strong>ISO 9001:2025 Certified company</strong> and all our products comply with stringent International Standards such as ISO/IEC 17025:2025 Certifications.
         </p>
         </section>
 

@@ -86,7 +86,7 @@ const Navbar = () => {
                       ARCL INSTRUMENTS PVT. LTD
                     </p>
                     <p className="text-[8px] md:text-[10px] text-center">
-                      ( An ISO 9001:2015 Certified Company )
+                      ( An ISO 9001:2025 Certified Company )
                     </p>
                   </div>
                 </Link>

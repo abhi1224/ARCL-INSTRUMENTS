@@ -47,4 +47,7 @@
   -webkit-text-stroke: 1px #ffffffa9;  /* white border */
   font-weight: bold;
 }
-          
+.floating-button{
+  background: linear-gradient(to right, #FFA500, #FFD700, #32CD32);
+
+}
