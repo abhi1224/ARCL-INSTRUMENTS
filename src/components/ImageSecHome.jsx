@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "../index.css";
-import QuoteFormPopup from "./QuoteFormPopUp";
+import QuoteFormPopup from "./QuoteFormPopup";
 
 function ImageSecHome({ title, images }) {
   const [isOpen, setIsOpen] = useState(false);

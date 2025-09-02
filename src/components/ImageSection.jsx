@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
-import QuoteFormPopup from "./QuoteFormPopUp";
+import QuoteFormPopup from "./QuoteFormPopup";
 
 const ImageSection = ({ title, images }) => {
   const [isOpen, setIsOpen] = useState(false);
