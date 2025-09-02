@@ -5,7 +5,7 @@ import logo from "../assets/LOGO.png";
 import FloatingButtons from "./FloatingButtons";
 import { FaPhoneAlt } from "react-icons/fa";
 import "../index.css";
-import QuoteFormPopup from "./QuoteFormPopUp";
+import QuoteFormPopup from "./QuoteFormPopup";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
