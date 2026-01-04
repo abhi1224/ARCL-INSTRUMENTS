@@ -66,7 +66,7 @@ const Footer = () => {
         {/* 3. Address */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Address</h3>
-          <a href="https://maps.app.goo.gl/dJHoT3W4RwZn6pFC7" className="text-gray-300 text-sm hover:text-blue-600 hover:underline">
+          {/* <a href="https://maps.app.goo.gl/dJHoT3W4RwZn6pFC7" className="text-gray-300 text-sm hover:text-blue-600 hover:underline">
             
             Arcl Instruments Private Limited <br />
             
@@ -76,7 +76,9 @@ const Footer = () => {
             <br />
             Kandivali (West), <br />
             Mumbai - 400067, Maharashtra ,INDIA
-          </a>
+          </a> */}
+          <p className="cursor-pointer"> 
+                  ARCL Instruments Pvt. Ltd. <br /> Shop No. 6, Siddivinayak Park CHS,Sector - 8A Airoli, <br /> Navi Mumbai - 400708</p>
         </div>
 
         {/* 4. Contact */}
