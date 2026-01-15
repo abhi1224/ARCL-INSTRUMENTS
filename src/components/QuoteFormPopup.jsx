@@ -26,7 +26,7 @@ export default function QuoteFormPopup({ setQuoteForm, title = '' }) {
   return (
     <div className="flex justify-center items-center h-screen">
       {/* Popup overlay */}
-      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-100">
         {/* Popup card */}
         <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-6 relative">
           {/* Close button */}

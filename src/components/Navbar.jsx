@@ -143,7 +143,9 @@ const Navbar = () => {
                   </Link>
                 ))}
 
-                <button className="button-style font-semibold px-4 py-2 flex items-center gap-2 transition rounded-md">
+                <button 
+                onClick={() => setQuoteForm(true)}
+                className="button-style font-semibold px-4 py-2 flex items-center gap-2 transition rounded-md">
                   Request Quote <ArrowRight className="w-5 h-5" />
                 </button>
               </div>

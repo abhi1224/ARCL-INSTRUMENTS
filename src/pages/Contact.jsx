@@ -120,11 +120,11 @@ const handleSubmit = (e) => {
           </div>
         </div>
 
-        {/* <div className="mt-10 w-full mx-auto">
+        <div className="mt-10 w-full mx-auto">
           <iframe 
             className='w-full h-96'
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.6498292041924!2d72.83050631022134!3d19.210490947662752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b72f867ac6c3%3A0x660b75f814afccbe!2sARCL%20Instruments%20Private%20Limited!5e0!3m2!1sen!2sin!4v1756807128364!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div> */}
+        </div> 
     </section>
     </>
   )
