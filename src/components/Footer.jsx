@@ -70,12 +70,12 @@ const Footer = () => {
             
             Arcl Instruments Private Limited <br />
             
-            Keshrinath Gopal Patil CH,
+            Shop No. 6, 
             <br />
-            Bander Pakhadi Road
+            Siddivinayak Park CHS,
             <br />
-            Kandivali (West), <br />
-            Mumbai - 400067, Maharashtra ,INDIA
+            Sector - 8A Airoli,<br />
+            Navi Mumbai - 400708
           </a>
         </div>
 
